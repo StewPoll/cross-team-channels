@@ -11,7 +11,6 @@ def cross_team():
         "team1_domain": "https://hooks.slack.com/services/URL/TO/WEBHOOK_1",
         "team2_domain": "https://hooks.slack.com/services/URL/TO/WEBHOOK_2"
     }
-    message = dict((key, request.form[key]) for key in request.form.keys())
     return link(teams, request.form)
 ```
 
