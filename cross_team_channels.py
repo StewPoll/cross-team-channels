@@ -26,7 +26,7 @@ def link(teams, form):
                 payload = {
                     "text": message["text"],
                     "icon_url": "http://www.gravatar.com/avatar/{0}?d=retro".format(hash),
-                    "username": "{0} - {1}".format(message["username"], message["team_domain"])
+                    "username": "{0} - {1}".format(message["user_name"], message["team_domain"])
                 }
                 requests.post(teams[team], json=payload)
         return ('', 204)
